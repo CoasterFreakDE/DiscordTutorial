@@ -1,6 +1,7 @@
 package de.coaster.listener;
 
 import de.coaster.DiscordTutorial;
+import de.coaster.games.CounterGame;
 import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -27,6 +28,10 @@ public class CommandListener extends ListenerAdapter {
 				}
 			}
 			
+			
+			if(channel.getIdLong() == 593768981135884309l) {
+				CounterGame.countUpdate(channel, event.getMessage());
+			}
 		}
 		
 	}
