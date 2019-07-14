@@ -23,6 +23,8 @@ public class ReactCommand implements ServerCommand {
 		List<Emote> emotes = message.getEmotes();
 		
 		
+		
+		
 		if(!channels.isEmpty()) {
 			TextChannel tc = message.getMentionedChannels().get(0);
 			String messageIDString = args[2];
