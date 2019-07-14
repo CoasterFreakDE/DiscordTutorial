@@ -11,13 +11,19 @@ import java.util.Random;
 
 import javax.security.auth.login.LoginException;
 
+import com.sedmelluq.discord.lavaplayer.player.AudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager;
+import com.sedmelluq.discord.lavaplayer.source.AudioSourceManagers;
+
 import de.coaster.commands.StatschannelCommand;
 import de.coaster.listener.CommandListener;
+import de.coaster.listener.JoinListener;
 import de.coaster.listener.ReactionListener;
 import de.coaster.listener.VoiceListener;
 import de.coaster.manage.DONOTOPEN;
 import de.coaster.manage.LiteSQL;
 import de.coaster.manage.SQLManager;
+import de.coaster.music.PlayerManager;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.Guild;
@@ -32,8 +38,6 @@ public class DiscordTutorial {
 	public ShardManager shardMan;
 	private CommandManager cmdMan;
 	private Thread loop;
-	
-	
 	
 	public static void main(String[] args)  {
 		try {
@@ -56,18 +60,15 @@ public class DiscordTutorial {
 		builder.setActivity(Activity.playing("leben."));
 		builder.setStatus(OnlineStatus.ONLINE);
 		
-		
-		
 		this.cmdMan = new CommandManager();
 		
 		builder.addEventListeners(new CommandListener());
 		builder.addEventListeners(new VoiceListener());
 		builder.addEventListeners(new ReactionListener());
+		builder.addEventListeners(new JoinListener());
 		
 		shardMan = builder.build();
 		System.out.println("Bot online.");
-		
-		
 		
 		shutdown();
 		runLoop();
@@ -155,10 +156,8 @@ public class DiscordTutorial {
 			
 			int color = rand.nextInt(colors.length);
 			for(Guild guild : shardMan.getGuilds()) {
-				/* TODO: EDIT ROLEID 
 				Role role = guild.getRoleById(582279555021012992l);
 				role.getManager().setColor(colors[color]).queue();
-				*/
 			}
 			
 			

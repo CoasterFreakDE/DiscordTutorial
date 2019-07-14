@@ -10,6 +10,7 @@ import de.coaster.commands.HugCommand;
 import de.coaster.commands.PreviewCommand;
 import de.coaster.commands.ReactCommand;
 import de.coaster.commands.ReactRolesCommand;
+import de.coaster.commands.RoleCreation;
 import de.coaster.commands.SQLCommand;
 import de.coaster.commands.StatschannelCommand;
 import de.coaster.commands.TimeRank;
@@ -36,6 +37,7 @@ public class CommandManager {
 		this.commands.put("timerank", new TimeRank());
 		this.commands.put("statchannel", new StatschannelCommand());
 		this.commands.put("admininvite", new AdminInvite());
+		this.commands.put("createrole", new RoleCreation());
 	}
 	
 	public boolean perform(String command, Member m, TextChannel channel, Message message) {
