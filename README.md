@@ -17,11 +17,3 @@ Leider hat das nur dazu geführt, dass jetzt noch mehr Leute auf mich zukommen u
 *Freizeit & Schlafen* | *ca. 6 Stunden*
 
 Wie ihr merkt, bleibt da leider nicht mehr viel für mich übrig. In den letzen Wochen wurde mein Schlaf immer kürzer, damit ich alles an einem Tag noch unterkriege, allerdings macht da mein Körper nicht mit.
-
-# Lösung
-Es ist wahrscheinlich keine dauerhafte Lösung, aber bis wir was besseres haben wird der neue Sourcecode 
-nur noch an meine [Patreons](https://www.patreon.com/coasterfreak) ausgegeben. 
-Sonnst würde meine Schlafenszeit bei den Musikbot Tutorials auf die 0 zugehen und das will ich meinem Körper nicht antun.
-
-# Hinweise
-*Wenn ihr ein Patreon seid, dürft ihr auch euren Freunden/Bekannten den Sourcecode zukommen lassen. Allerdings werde ich nur für die Patreons Support zur implementierung bieten.*
